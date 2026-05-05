@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 // http://localhost:2000/signup
 
 router.post("/signup", signup)
-router.post("/signin", signin)
+router.post("/", signin)
 router.patch("/verify", verify) 
 router.post("/aganverify", aganverify)
 router.patch("/update", authMiddleware, user_update)
