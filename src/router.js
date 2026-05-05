@@ -6,14 +6,14 @@ import authMiddleware from './middlewere/auth.js';
 
 const router = express.Router()
 
-// router.get("/", (req, res) => {
-//     res.send("Hellow World")
-// })
+router.get("/", (req, res) => {
+    res.send("Hellow World")
+})
 
 // http://localhost:2000/signup
 
 router.post("/signup", signup)
-router.post("/", signin)
+router.post("/signin", signin)
 router.patch("/verify", verify) 
 router.post("/aganverify", aganverify)
 router.patch("/update", authMiddleware, user_update)
